@@ -1,0 +1,20 @@
+.order-sorting{
+    width: 20vw;
+    background-color: rgba(255, 255, 255, 0);
+    color: #1a1a6a;
+    margin-bottom: 3vh;
+    border-radius: 0%;
+    box-shadow: none;
+    border: none;
+}
+
+.title{
+    background-color: rgba(255, 255, 255, 0);
+    color: #1a1a6a;
+}
+
+p:hover{
+    cursor: pointer;
+    color: #5c5c78;
+    text-decoration: underline;
+}

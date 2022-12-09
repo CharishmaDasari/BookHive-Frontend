@@ -1,0 +1,40 @@
+<!-- ADMIN BOOK VIEW -->
+<div class="col m-1" *ngIf="role">
+    <div class="admin-card">
+      <div class="underlay">
+        <p>THE BOOK <br> STATION</p>
+      </div>
+      <div class="img-div">
+        <img src={{oneBook.url}} class="card-img-top" alt="medium-wash-denim-swatch">
+      </div>
+      <!-- <img src={{img}} class="card-img-top" alt="medium-wash-denim-swatch"> -->
+      <div class="card-body">
+        <h4 class="card-title mb-1">No. {{oneBook.id}}-{{oneBook.title}}</h4>
+        <h5>${{oneBook.price}}</h5>
+        <p class="card-text">{{oneBook.description}}</p>
+        <button mat-raised-button (click)="edit()">Edit</button>
+        <button mat-raised-button (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- USER Book VIEW -->
+  <div class="book-container" *ngIf="!role">
+    <mat-card class="example-card">
+
+      <div class="imgbox" >
+        <img (click)="openDialog()" src="{{oneBook.url}}" class="imgbox" >
+      </div>
+
+      <mat-card-header style="margin-top: 10px;">
+        <mat-card-title (click)="openDialog()">{{oneBook.title}}</mat-card-title>
+        <mat-card-subtitle>${{oneBook.price}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-actions class="button-holder">
+        <button class="button-card" mat-raised-button (click)="addToCart()">Add to Cart</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+

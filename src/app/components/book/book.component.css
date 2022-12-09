@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Istok Web", sans-serif;
+}
+
+body, .book-container{
+    display: inline-block;
+    justify-content: center;
+    margin: 0 10px;
+    align-items: center;
+    min-height: 75vh;
+    background: white;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+.example-card{
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: tan;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.example-card::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, .6);
+    transform: skewY(345deg);
+    transition: 0.9s;
+}
+
+.example-card:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.example-card::after{
+    content: "THE Book Hive";
+    position:absolute;
+    text-align: center;
+    z-index: 0;
+    bottom: 0;
+    left:0;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: rgb(0,0,0,0.06);
+}
+
+.example-card .imgbox{
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    z-index: 1;
+
+    /*background: url(src\app\images\jasmin-chew-KNu2oQ69bMw-unsplash.jpg);*/
+    background-size:contain;
+    max-height: 280px;
+}
+
+/* */
+
+.example-card .header{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+mat-card-title{
+    margin-top: 5px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+mat-card-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #1a1a6a;
+}
+
+mat-card-subtitle {
+    font-size:24px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.example-card .button-holder .button-card {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: tan;
+    text-decoration: none;
+    background: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.example-card .button-holder .button-card:hover {
+    background-color: black;
+}
+
+.example-card:hover .button-holder .button-card{
+    top:0;
+    opacity: 1;
+}
+
+/* ADMIN CSS */
+.admin-card{
+    background: tan;
+    border-radius: 20px;
+    border: 5px solid rgb(255, 255, 255, .6);
+    overflow:auto;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    /* height: 30vh; */
+    font-family: "Istok Web", sans-serif;
+
+}
+
+.underlay{
+    z-index: 1;
+    margin-top: 10%;
+    padding: 2.5%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.295);
+    color: rgba(210, 180, 140, 0.767);
+    font-family: "Istok Web", sans-serif !important;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.underlay p{
+    font-family: "Istok Web", sans-serif !important;
+}
+
+.card-body{
+    padding: 8%;
+}
+
+.admin-card button{
+    background-color: rgb(255, 255, 255, .6);
+    color: #1a1a6a;
+    margin: 5px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.admin-card button:hover{
+    background-color: rgb(142, 121, 93);
+    color: aliceblue;
+}
+
+
+
+h4, h5, p{
+    font-family:'Times New Roman', Times, serif;
+}
+
+h4{
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+h5{
+    font-size: 1em;
+}
+
+.img-div{
+    width: auto;
+    background-size:contain;
+    max-height: 280px;
+    overflow-y: hidden;
+
+}
+
+/* FOR DIALOG */
+::ng-deep .custom-dialog > mat-dialog-container {
+    background-color: rgba(214, 160, 78, 0.954);
+  }

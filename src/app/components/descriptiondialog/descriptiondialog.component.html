@@ -1,0 +1,9 @@
+<div class="additional-details-container">
+    <h2>{{book.title}} - ${{book.price}}</h2>
+    <h3 id="boo-no">Book No. {{book.id}}</h3>
+    <div class="book-img-container">
+        <img src={{book.url}} alt={{book.title}}>
+    </div>
+    <p>Details: {{book.description}}</p>
+    <button mat-raised-button (click)="close()">Close</button>
+</div>

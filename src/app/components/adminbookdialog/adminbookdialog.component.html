@@ -1,0 +1,36 @@
+<div class="book-edit">
+    <h2>BookNo: {{book.id}}</h2>
+
+    <form [formGroup]="editBookForm" (ngSubmit)="edit()">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Book Title</mat-label>
+            <input matInput placeholder="Ex.Verity" formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Book Description</mat-label>
+            <textarea matInput placeholder="Ex. Thriller..." formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Book Image</mat-label>
+          <textarea matInput placeholder="Copy Img Url and paste" formControlName="url"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" formControlName="price">
+            <span matPrefix>$&nbsp;</span>
+            <!-- <span matSuffix>.99</span> -->
+          </mat-form-field>
+        <section class="action-buttons">
+            <button mat-raised-button (click)="cancelEdit()">Cancel</button>
+            <button mat-raised-button [disabled]="editBookForm.invalid" (click)="edit()">Submit Changes</button>
+        </section>
+        <!-- <button mat-raised-button (click)="cancelEdit()">Cancel</button>
+        <button mat-raised-button [disabled]="editProductForm.invalid" (click)="edit()">Submit Changes</button> -->
+
+    </form>
+</div>
+

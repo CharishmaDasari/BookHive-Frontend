@@ -1,0 +1,20 @@
+
+<mat-expansion-panel class="order-sorting"  hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        <mat-icon>menu</mat-icon>
+        
+        Sort Orders By:
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <p (click)="viewAllOrders()">See All Orders</p>
+    <p (click)="sortByPlaced()">See Placed Orders</p>
+    <p (click)="sortByShipped()">See Shipped Orders</p>
+    <p (click)="sortByDelivered()">See Delivered Orders</p>
+</mat-expansion-panel>
+
+<section class="orders-container">
+    <app-order *ngFor="let oneOrder of filteredOrdersArr" [oneOrder]="oneOrder" [role]="role"
+    (handleDelete)="cancelOrder($event)"></app-order>
+</section>

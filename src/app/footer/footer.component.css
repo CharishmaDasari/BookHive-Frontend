@@ -1,0 +1,30 @@
+
+.footer{
+	/* color: #1a1a6a; */
+	background-color:rgba(214, 160, 78, 0.856);
+	/* background-color: #b5b5de; */
+	opacity: 0.9;
+	border-top: 8px solid rgb(190, 140, 65);
+	/* border-top: 8px solid #9090be; */
+
+}
+
+.footer h5{
+	margin-top: 1em;
+	margin-right: 1em;
+	font-weight: bolder;
+}
+
+
+img{
+	height: 3vw;
+	width: 3vw;
+	border-radius: 10px;
+	justify-content: space-evenly;
+	margin: 4px;
+}
+
+#about{
+	color: #1a1a6a;
+	font-weight: bold;
+}

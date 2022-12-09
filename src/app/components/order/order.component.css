@@ -1,0 +1,52 @@
+/* .order-card{
+    margin-top: 1vh;
+    box-shadow: none;
+    border-radius: 0%;
+    border: none !important;
+    background-color: rgba(191, 191, 191, 0);
+    color: #1a1a6a;
+    color: #1a1a6a;
+    margin-bottom: 1vh;
+} */
+
+.title, .desc{
+    color: #1a1a6a;
+}
+
+mat-card{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    width: auto;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    box-shadow: none;
+    border-radius: 0%;
+    border: none !important;
+    background-color: rgba(191, 191, 191, 0.441);
+}
+
+mat-expansion-panel{
+    background-color: rgba(191, 191, 191, 0.441);
+    color: #1a1a6a;
+}
+
+mat-expansion-panel-header{
+    background-color: rgba(191, 191, 191, 0.441);
+}
+
+mat-card-actions button, button{
+    background-color: #1a1a6a;
+}
+
+mat-card-actions button:hover, button:hover{
+    background-color: #a9a9dc;
+    color: #1a1a6a;
+}
+
+::ng-deep .custom-dialog > mat-dialog-container {
+    background-color: rgba(214, 160, 78, 0.954);
+  }

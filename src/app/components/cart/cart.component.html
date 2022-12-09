@@ -1,0 +1,26 @@
+<body>
+  <div class="cart-container">
+    <!-- <div class="Heading">My Cart</div> -->
+
+      <div cart-items>
+        <div *ngIf="!emptyCart" class="grid">
+          <app-cartbook *ngFor="let oneBook of booksArr" [oneBook]="oneBook"
+            (removeBook)="removeBook($event)"></app-cartbook>
+        </div>
+
+          <h2 *ngIf="emptyCart" class="none">No items in cart</h2>
+      </div>
+      <hr>
+      <h3 style="text-align: left; margin-left: 1cm;">Number of items: {{noItems}}</h3>
+      <!-- <br> -->
+      <h3 style="text-align: left; margin-left: 1cm;">Order total: ${{cartTotal.toFixed(2)}}</h3>
+      <img style="float: right; border-radius: 20px; margin-right: 1cm;" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-large.png" alt="Buy now with PayPal" />
+      <div class="total-amount">
+
+        <button mat-raised-button class="button" (click)="clearCart()" [disabled]="booksArr.length == 0">Clear Cart</button>
+        <button mat-raised-button class="button" (click)="checkOut()" [disabled]="booksArr.length == 0">Place Order</button>
+      </div>
+
+  </div>
+
+</body>

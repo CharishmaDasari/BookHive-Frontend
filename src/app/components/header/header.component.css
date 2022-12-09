@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+
+nav{
+    background-color: white;
+    color: #1a1a6a;
+
+    display: flex;
+    flex-direction: row;
+/* 
+    text-align: center;*/
+    align-items: center; 
+    justify-content:center;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+
+    height: auto;
+}
+
+#navbarNav{
+    margin-right: 5px;
+float: right;}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: #1a1a6a;
+    margin-right: 1em;
+    font-weight:300;
+    font-stretch: condensed;
+    margin-bottom: 0%;
+}
+
+a{
+    font-family: 'Times New Roman', Times, serif;
+    color: #1a1a6a;
+    text-decoration: none; 
+    margin: .5em;
+    font-size: larger;
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    color: #1a1a6a;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(214, 160, 78);
+    transform-origin: bottom right;
+    transition: transform 0.1s ease-out;
+}
+  
+a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+button{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #a9a9dc;
+    color: #1a1a6a;
+    font-size: 16px;
+    margin-left: 0%;
+    margin-right: 5px;
+}
+
+button:hover{
+    background-color: rgb(214, 160, 78);
+    color:white;
+}

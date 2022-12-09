@@ -1,0 +1,35 @@
+.additional-details-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#boo-no{
+    color: rgb(151, 100, 25);
+}
+
+.book-img-container{
+    max-height: 60vh;
+    overflow-y: hidden;
+    text-align: center;
+    overflow-x: hidden;
+    margin-bottom: 1em;
+}
+
+img{
+    width: auto;
+    background-size: cover;
+    max-height: 60vh;
+}
+
+button{
+    margin-right: 5px;
+    background-color: rgba(191, 191, 191, 0.441);
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: rgb(184, 122, 28);
+    color: aliceblue;
+}

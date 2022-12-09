@@ -1,0 +1,41 @@
+
+nav{
+    position: fixed;
+    background-color: rgb(15, 145, 239);
+    top: 0;
+    width: 100%;
+    white-space:nowrap;
+    z-index: 1000;
+
+
+}
+nav
+a, h1 {
+    /* float: right; */
+    display: block;
+    color: #1a1a6a;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    /* font-size: 50%; */
+    font-family: 'Times New Roman', Times, serif;
+    height: 10%;
+}
+a{
+    float: right;
+    font-size: 19px;
+    
+}
+a:hover {
+    background-color: #ddd;
+    color: black;
+    padding-left: 1;
+    padding-right: 1;
+    padding-top: 1;
+    padding-bottom: 1;
+}
+h1{
+    float: left;
+    font-size: 30px ;
+}
+

@@ -1,0 +1,45 @@
+.newbookform-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  
+}
+
+.input-panel{
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 1em;
+    width: 40vw;
+    background-color: #1a1a6a;
+    color: rgb(220, 220, 220);
+}
+
+mat-panel-title{
+    color: rgb(220, 220, 220);
+}
+
+mat-icon{
+    color: rgb(214, 160, 78);
+}
+
+.newbookform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newbookform button:enabled{
+    margin-top: 5px;
+    background-color: #a9a9dc;
+    color: #1a1a6a;
+}
+
+.newbookform button:enabled:hover{
+    background-color: rgb(214, 160, 78);
+    color: whitesmoke;
+}

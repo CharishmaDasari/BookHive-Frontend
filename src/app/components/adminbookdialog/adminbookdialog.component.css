@@ -1,0 +1,17 @@
+.book-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+button{
+    margin-right: 5px;
+    background-color: rgba(191, 191, 191, 0.441);
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: rgb(184, 122, 28);
+    color: aliceblue;
+}

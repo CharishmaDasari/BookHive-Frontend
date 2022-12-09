@@ -1,0 +1,28 @@
+<div class="order-edit">
+    <h2>OrderNo: {{order.orderNo}}</h2>
+
+    <form [formGroup]="editOrderForm" >
+
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>User Information:</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder={{order.userId}} formControlName="userId">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>current status: {{order.deliveryStatus}}</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="placed">placed</mat-option>
+          <mat-option value="shipped">shipped</mat-option>
+          <mat-option value="delivered">delivered</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <section class="action-buttons">
+        <button mat-raised-button (click)="cancelEdit()">Cancel</button>
+        <button mat-raised-button (click)="edit()">Update Status</button>
+      </section>
+
+        <!-- <button mat-raised-button (click)="cancelEdit()">Cancel</button>
+        <button mat-raised-button (click)="edit()">Update Status</button> -->
+    </form>
+</div>

@@ -1,0 +1,10 @@
+.orders-container{
+height: 680px;
+
+}
+
+#your-orders{
+    font-weight: 500;
+  color: #1a1a6a;
+  margin-left: 1vw;
+}

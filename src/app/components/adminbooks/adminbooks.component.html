@@ -1,0 +1,48 @@
+<div class="newbookform-container">
+    <mat-expansion-panel hideToggle class="input-panel">
+
+        <!-- <p *ngIf="error" color="accent">{{error}}</p> -->
+
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+        <mat-icon>add</mat-icon>
+        Add New Book
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form class="newbookform" [formGroup]="newBookForm">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Book Title</mat-label>
+            <input matInput placeholder="Ex. Wings Of Fire" formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Book Description</mat-label>
+            <textarea matInput placeholder="Ex. The book is ..." formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Book Image</mat-label>
+            <textarea matInput placeholder="Copy Img Url and paste" formControlName="url"></textarea>
+          </mat-form-field>
+
+        <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" formControlName="price">
+            <span matPrefix>$&nbsp;</span>
+          </mat-form-field>
+
+        <button mat-raised-button color="accent" [disabled]="newBookForm.invalid" (click)="addBook()">Add Book</button>
+
+    </form>
+
+    </mat-expansion-panel>
+</div>
+
+<!-- <section class="books-container">
+    <app-book *ngFor="let oneBook of filteredBooksArr" [oneBook]="oneBook" (handleDelete)="deleteBook($event)" [role]="role"></app-book>
+</section> -->
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 p-3">
+    <app-book *ngFor="let oneBook of filteredBooksArr" [oneBook]="oneBook" (handleDelete)="deleteBook($event)" [role]="role"></app-book>
+</div>

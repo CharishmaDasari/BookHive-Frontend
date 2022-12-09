@@ -1,0 +1,74 @@
+.carousel-inner img{
+    /* min-height: 30vh;
+    max-height: 70vh; */
+    background-size: cover;
+    width: 100%;
+  }
+
+  .carousel-item{
+    max-height: 80vh;
+  }
+
+  .carousel-item h2{
+    text-shadow: 2px 2px 8px black;
+    font-weight: 500;
+    font-size: 2em;
+  }
+
+  /* .carousel-caption{
+    background-color: rgba(210, 180, 140, 0.256);
+  } */
+
+
+  .img-1{
+    min-height: 500px;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+
+    background-image: url("https://gapinc-prod.azureedge.net/gapmedia/gapcorporatesite/media/images/articles/2019/06/indigo_inline.jpg?ext=.jpg");
+  }
+  .img-2{
+    min-height: 500px;
+
+    height: 100%;
+    /*position: absolute;*/
+    background-size: cover;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    background-image: url("https://cm-prd.coats.com/-/media/Coats/End-Use/Apparel/Denim-jeans/Apparel---Denim-Leatherwear-Jeans.jpg") ;
+  }
+  .img-3{
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("src/app/images/carousel-three.png");
+  }
+  /* .carousel-container img{
+    height: 100%;
+  } */
+
+  .books-container{
+    margin-left: 15vw;
+  }
+
+  #all-books{
+    margin-left: 17vw;
+    margin-top: 8vh;
+    font-weight: 500;
+    color: #1a1a6a;
+    /* background-color: rgba(233, 233, 233, 0.884); */
+    width: fit-content;
+    padding: 1%;
+    border-radius: 10px;
+    /* text-decoration: underline; */
+  }

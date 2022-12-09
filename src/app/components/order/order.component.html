@@ -1,0 +1,65 @@
+<!-- ADMIN CARD VIEW BELOW -->
+<mat-card class="order-card" *ngIf="role">
+
+  <mat-card-header>
+    <mat-card-title class="title">Order Number: {{oneOrder.orderNo}}</mat-card-title>
+    <mat-card-subtitle class="desc">CustomerID: {{oneOrder.userId}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel class="order-card" hideToggle (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            Click to {{panelOpenState? 'hide' : 'view'}} order details <mat-icon>{{panelOpenState? 'chevron_right' : 'expand_more'}}</mat-icon>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <p>Shipping Address: {{oneOrder.deliveryAddress}}</p>
+        <p>Order Status: {{oneOrder.deliveryStatus}}</p>
+        <h3>Books:</h3>
+        <ul>
+            <li *ngFor="let oneBook of booksArr">Book: {{oneBook.bookId}}-{{oneBook.title}} x{{oneBook.quantity? oneBook.quantity: 1}}, ${{oneBook.price}} each</li>
+        </ul>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button (click)="edit()">Edit</button>
+    <button mat-raised-button (click)="delete()">Cancel Order</button>
+  </mat-card-actions>
+
+</mat-card>
+
+<!-- CUSTOMER CARD VIEW BELOW -->
+<mat-card class="order-card" *ngIf="!role">
+
+  <mat-card-header>
+    <mat-card-title class="title">ConfirmationNo: {{oneOrder.orderNo}}</mat-card-title>
+    <mat-card-subtitle class="desc">Order Status: {{oneOrder.deliveryStatus}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel class="order-card" hideToggle (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            Click to {{panelOpenState? 'hide' : 'view'}} order details <mat-icon>{{panelOpenState? 'chevron_right' : 'expand_more'}}</mat-icon>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <p>Your Address: {{oneOrder.deliveryAddress}}</p>
+        <p>Order Status: {{oneOrder.deliveryStatus}}</p>
+        <h3>Books:</h3>
+        <ul>
+            <li *ngFor="let oneBook of booksArr">Book: {{oneBook.bookId}}-{{oneBook.title}} x{{oneBook.quantity? oneBook.quantity: 1}}, ${{oneBook.price}} each</li>
+        </ul>
+        <button mat-raised-button *ngIf="customerCancel" (click)="delete()">Cancel Order</button>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

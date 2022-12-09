@@ -1,0 +1,31 @@
+.order-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+mat-option{
+    background-color: rgba(214, 160, 78, 0.824);
+}
+
+.mat-option:hover{
+    background: rgb(184, 122, 28) !important;
+
+}
+
+.mat-option.mat-active {
+    background: rgb(184, 122, 28) !important;
+    color: white !important;
+  }
+
+button{
+    margin-right: 5px;
+    background-color: rgba(191, 191, 191, 0.441);
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: rgb(184, 122, 28);
+    color: aliceblue;
+}

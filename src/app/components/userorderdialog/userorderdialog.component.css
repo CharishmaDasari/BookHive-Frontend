@@ -1,0 +1,17 @@
+.order-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+button{
+    margin-right: 5px;
+    background-color: rgba(191, 191, 191, 0.441);
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: rgba(0,0,0,0);
+    color: aliceblue;
+}

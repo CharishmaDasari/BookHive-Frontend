@@ -1,0 +1,23 @@
+
+.about-section {
+  padding: 100px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 12pt;
+  background: url(src\app\images\about.webp) center;
+}
+
+.space{
+  padding-bottom: 5%;
+}
+#about-us{
+  background-color: aqua;
+}
+h5{
+  color: aqua;
+  text-align: center;
+}
+.row{
+  background-color: aqua;
+}
